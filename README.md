@@ -9,7 +9,12 @@ The Improved Maze Solver is a C++ program leveraging image processing techniques
 
 ## Prerequisites
 
-Make sure you have OpenCV installed to compile and run the program. You can install OpenCV using the following command:
+Make sure you have OpenCV installed to compile and run the program. I recomand to follow the guide:
+https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html
+
+or, 
+
+You can install OpenCV using the following command:
 
 ```bash
 sudo apt-get install libopencv-dev
@@ -20,7 +25,7 @@ sudo apt-get install libopencv-dev
 Compile the program using a C++ compiler. For example:
 
 ```bash
-g++ -o mazeSolver mazeSolver.cpp `pkg-config --cflags --libs opencv`
+g++ -o mazeSolver mazeSolver.cpp `pkg-config --cflags --libs opencv4`
 ```
 
 ## Usage
@@ -33,19 +38,19 @@ Run the compiled executable with the maze image file as a command-line parameter
 
 ## Program Steps
 
-1. **Binarization and Complement**
+1. **Binarization and Complement:**
 The program begins by converting the maze image to a binary format, distinguishing between light and dark areas. Additionally, a complement step enhances the representation of maze elements.
 
-2. **Element Size Evaluation**
+2. **Element Size Evaluation:**
 An intelligent element size evaluation has been introduced to adapt to different maze structures, ensuring accurate processing for optimal path determination.
 
-3. **Labelization and Path Identification**
+3. **Labelization and Path Identification:**
 The algorithm labels connected regions in the maze, facilitating a clearer identification of paths. Morphological operations, including erosion and dilation, play a crucial role in enhancing the path visibility.
 
-4. **Solution Calculation**
+4. **Solution Calculation:**
 The Improved Maze Solver calculates the optimal solution path by considering the results obtained from morphological operations. The solution is represented as a visual map highlighting the navigable paths.
 
-5. **Performance Evaluation**
+5. **Performance Evaluation:**
 An enhanced performance evaluation mechanism provides insights into the efficiency of the algorithm, measuring total execution time and clock cycles.
 
 ## Performance Metrics
