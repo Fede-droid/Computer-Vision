@@ -1,4 +1,3 @@
-# Computer-Vision
 # Maze Solver
 
 ## Overview
